@@ -1,5 +1,5 @@
 # Cluster
-I created a cluster for the Network Laboratory course at the Instituto Balseiro
+I created a cluster for the Network Laboratory course at the Instituto Balseiro using multithreading and socket programming.
 
 ## To run this cluster, first compile:
 g++ -g -Wall \
