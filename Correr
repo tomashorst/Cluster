@@ -1,0 +1,93 @@
+Correr:
+
+g++ -g -Wall \
+	Class_Master.cpp \
+	Class_Client2M.cpp \
+	myconnect.cpp \
+	Class_Server2M.cpp \
+	-o Master
+
+g++ Dispatch.cpp -o Dispatch
+
+g++ Class_Server.cpp -o Server
+
+./Master
+./Server -p 9090 -i 127.0.0.1
+./Dispatch -p 8080 -i 127.0.0.1
+
+
+
+
+$ chmod +x ejecutar.sh
+(base) jortz@jortz:~/Documents/IB/Labo6/Trabajo final$ ./ejecutar.sh 
+(base) jortz@jortz:~/Documents/IB/Labo6/Trabajo final$ ./ejecutar.sh  3
+
+
+
+
+g++ -g -Wall \
+	Master.cpp \
+	myconnect.cpp \
+	protocolo.cpp \
+	Class_Client2M.cpp \
+	Class_Server2M.cpp \
+	-o Master
+	
+./Master
+	
+g++ -g -Wall \
+	Server.cpp \
+	Server_DoJob.cpp \
+	Server_RunJob.cpp \
+	Server_Interactive.cpp \
+	myconnect.cpp \
+	protocolo.cpp \
+	-o Server
+	
+./Server -p 9090 -i 127.0.0.1	
+
+g++ -g -Wall \
+	Cliente.cpp \
+	Cliente_RunInteractive.cpp \
+	myconnect.cpp \
+	protocolo.cpp \
+	-o Cliente
+	
+./Cliente -p 8080 -i 127.0.0.1 -c SUBMIT -a 5 -e ./ejecutar.sh -d /home/jortz/Documents/IB/Labo6/TrabajoFinal
+
+./Cliente -p 8080 -i 127.0.0.1 -c STATE -j 1
+
+./Cliente -p 8080 -i 127.0.0.1 -c DELETE -j 1
+	
+g++ -g -Wall \
+	Cliente_Interactivo.cpp \
+	Cliente_RunInteractive.cpp \
+	myconnect.cpp \
+	protocolo.cpp \
+	-o Cliente_Interactivo
+
+./Cliente_Interactivo -p 8080 -i 127.0.0.1 
+
+./ejecutar.sh 4
+	
+curl 'https://login.cnea.gob.ar:4100/wgcgi.cgi' --data-raw 'fw_username=raul.horst&fw_password=41773315RTh&fw_domain=cnea.ar&submit=Login&action=fw_logon&fw_logon_type=logon&redirect=&lang=en-US' --compressed
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
