@@ -46,4 +46,3 @@ g++ -g -Wall \
 ./Cliente -p 8080 -i 127.0.0.1 -c DELETE -j 1
 
 ./Cliente_Interactivo -p 8080 -i 127.0.0.1 
-
