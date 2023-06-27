@@ -36,8 +36,13 @@ g++ -g -Wall \
 
 ## Then, run:
 ./Master
+
 ./Server -p 9090 -i 127.0.0.1
+
 ./Cliente -p 8080 -i 127.0.0.1 -c SUBMIT -a 5 -e ./ejecutar.sh -d /home/jortz/Documents/IB/Labo6/TrabajoFinal
+
 ./Cliente -p 8080 -i 127.0.0.1 -c STATE -j 1
+
 ./Cliente -p 8080 -i 127.0.0.1 -c DELETE -j 1
+
 ./Cliente_Interactivo -p 8080 -i 127.0.0.1 
