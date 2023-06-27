@@ -1,8 +1,7 @@
 # Cluster
 I created a cluster for the Network Laboratory course at the Instituto Balseiro
-To run this cluster:
 
-## First, compile:
+## To run this cluster, first compile:
 g++ -g -Wall \
 	Master.cpp \
 	myconnect.cpp \
@@ -42,6 +41,11 @@ g++ -g -Wall \
 ./Cliente -p 8080 -i 127.0.0.1 -c SUBMIT -a 5 -e ./ejecutar.sh -d /home/jortz/Documents/IB/Labo6/TrabajoFinal
 
 ./Cliente -p 8080 -i 127.0.0.1 -c STATE -j 1
+
+## Commands:
+SUBMIT
+STATE
+DELETE
 
 ./Cliente -p 8080 -i 127.0.0.1 -c DELETE -j 1
 
